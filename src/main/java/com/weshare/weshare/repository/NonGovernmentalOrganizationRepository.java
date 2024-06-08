@@ -34,7 +34,7 @@ public interface NonGovernmentalOrganizationRepository extends JpaRepository<Non
                     "from NonGovernmentalOrganization n " +
                     "where n.name like %:name% "
     )
-    Page<NonGovernmentalOrganizationDTO> getNgosWithPages(String name, Pageable pageable);
+    Page<NonGovernmentalOrganization> getNgosWithPages(String name, Pageable pageable);
 
     @Query("select n from NonGovernmentalOrganization n " +
             "left outer join fetch n.category " +

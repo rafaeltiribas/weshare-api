@@ -68,5 +68,4 @@ public class NonGovernmentalOrganizationService {
     public Page<NonGovernmentalOrganization> getNgosWithPages(String name, Pageable pageable) {
         return nonGovernmentalOrganizationRepository.getNgosWithPages(name, pageable);
     }
-
 }

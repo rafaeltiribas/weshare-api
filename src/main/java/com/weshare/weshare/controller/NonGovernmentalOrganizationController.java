@@ -43,10 +43,10 @@ public class NonGovernmentalOrganizationController {
         return nonGovernmentalOrganizationService.deleteNgo(id);
     }
 
-    @GetMapping("category/byid")             // http://localhost:8080/produtos/categoria/1
-    public List<NonGovernmentalOrganization> getNgoByCategoryId(@RequestBody Category category) {
-        System.out.println(category);
-        return nonGovernmentalOrganizationService.getNgoByCategoryId(category);
+    @GetMapping("category/{byid}")             // http://localhost:8080/produtos/categoria/1
+    public List<NonGovernmentalOrganization> getNgoByCategoryId(@PathVariable("byid") Long byId)  {
+        System.out.println(byId);
+        return nonGovernmentalOrganizationService.getNgoByCategoryId(byId);
     }
 
     @GetMapping("categories")    // http://localhost:8080/produtos/categorias

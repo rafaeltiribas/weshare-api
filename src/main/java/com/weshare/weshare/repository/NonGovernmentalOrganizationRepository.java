@@ -1,19 +1,20 @@
 package com.weshare.weshare.repository;
 
-import com.weshare.weshare.model.Category;
 import com.weshare.weshare.model.NonGovernmentalOrganization;
+
 import jakarta.persistence.LockModeType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface NonGovernmentalOrganizationRepository extends JpaRepository<NonGovernmentalOrganization, Long> {
-    List<NonGovernmentalOrganization> findByCategory(Category category);
+    List<NonGovernmentalOrganization> findByCategoryId(Long category);
 
     @Query("select n from NonGovernmentalOrganization n " +
             "left outer join fetch n.category " +

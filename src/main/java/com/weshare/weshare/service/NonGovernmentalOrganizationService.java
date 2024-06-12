@@ -4,7 +4,6 @@ package com.weshare.weshare.service;
 import com.weshare.weshare.exception.DEntityException;
 import com.weshare.weshare.exception.EntityNotFoundException;
 import com.weshare.weshare.exception.TransientEntityException;
-import com.weshare.weshare.model.Category;
 import com.weshare.weshare.model.NonGovernmentalOrganization;
 import com.weshare.weshare.repository.NonGovernmentalOrganizationRepository;
 import jakarta.transaction.Transactional;
@@ -56,8 +55,8 @@ public class NonGovernmentalOrganizationService {
         return n;
     }
 
-    public List<NonGovernmentalOrganization> getNgoByCategoryId(Category category) {
-        return nonGovernmentalOrganizationRepository.findByCategory(category);
+    public List<NonGovernmentalOrganization> getNgoByCategoryId(Long category) {
+        return nonGovernmentalOrganizationRepository.findByCategoryId(category);
     }
 
     public List<NonGovernmentalOrganization> getNgosWithCategory() {

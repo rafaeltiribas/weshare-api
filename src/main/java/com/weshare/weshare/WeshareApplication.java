@@ -46,7 +46,7 @@ public class WeshareApplication implements CommandLineRunner {
 		categoryRepository.save(health);
 
 		NonGovernmentalOrganization ngo = new NonGovernmentalOrganization(
-				"ias.png",
+				"ayrton.jpg",
 				"Instituto Ayrton Senna",
 				"The Instituto Ayrton Senna promotes comprehensive education by means of research," +
 						" teacher training and innovative projects.",
@@ -55,7 +55,7 @@ public class WeshareApplication implements CommandLineRunner {
 		nonGovernmentalOrganizationRepository.save(ngo);
 
 		ngo = new NonGovernmentalOrganization(
-				"greenpeace.png",
+				"greenpeace.jpg",
 				"Greenpeace",
 				"Greenpeace investigates, documents and exposes the causes of environmental destruction.",
 				LocalDate.of(2023, 4, 27),
@@ -63,7 +63,7 @@ public class WeshareApplication implements CommandLineRunner {
 		nonGovernmentalOrganizationRepository.save(ngo);
 
 		ngo = new NonGovernmentalOrganization(
-				"msf.png",
+				"sem_fronteiras.jpg",
 				"Doctors Without Borders",
 				"an international humanitarian organisation that provides " +
 						"consistently neutral and impartial medical support in diverse crises.",
@@ -72,7 +72,7 @@ public class WeshareApplication implements CommandLineRunner {
 		nonGovernmentalOrganizationRepository.save(ngo);
 
 		ngo = new NonGovernmentalOrganization(
-				"fam.png",
+				"feeding.png",
 				"Feeding America",
 				"Feeding America is a nonprofit network of 200 " +
 						"food banks leading the fight against hunger in the United States",
@@ -81,7 +81,7 @@ public class WeshareApplication implements CommandLineRunner {
 		nonGovernmentalOrganizationRepository.save(ngo);
 
 		ngo = new NonGovernmentalOrganization(
-				"caramelo.png",
+				"caramelo.jpg",
 				"Caramelo Institute",
 				"The Caramelo Institute is a Brazilian organization that provides support to " +
 						"children and young people in situations of social vulnerability, promoting " +
@@ -91,10 +91,9 @@ public class WeshareApplication implements CommandLineRunner {
 		nonGovernmentalOrganizationRepository.save(ngo);
 
 		ngo = new NonGovernmentalOrganization(
-				"graac.png",
+				"graac.jpg",
 				"GRAACC",
-				"\n" +
-						"GRAACC is a Brazilian NGO dedicated to the treatment and research of childhood cancer, " +
+				"GRAACC is a Brazilian NGO dedicated to the treatment and research of childhood cancer, " +
 						"providing specialized medical care and support to affected families.",
 				LocalDate.of(2023, 4, 20),
 				health);

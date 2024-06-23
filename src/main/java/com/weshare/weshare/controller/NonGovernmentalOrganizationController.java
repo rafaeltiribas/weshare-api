@@ -56,7 +56,7 @@ public class NonGovernmentalOrganizationController {
 
     @GetMapping("page")
     public PageResult<NonGovernmentalOrganization> getNgosWithPages(
-            @RequestParam(value = "pages", defaultValue = "0") int pages,
+            @RequestParam(value = "page", defaultValue = "0") int pages,
             @RequestParam(value = "size", defaultValue = "3") int size,
             @RequestParam(value = "name", defaultValue = "") String name) {
         Pageable pageable = PageRequest.of(pages, size);

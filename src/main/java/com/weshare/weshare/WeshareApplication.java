@@ -2,7 +2,7 @@ package com.weshare.weshare;
 
 import com.weshare.weshare.model.Category;
 import com.weshare.weshare.model.NonGovernmentalOrganization;
-import com.weshare.weshare.model.User;
+import com.weshare.weshare.model.Usuario;
 import com.weshare.weshare.repository.CategoryRepository;
 import com.weshare.weshare.repository.NonGovernmentalOrganizationRepository;
 import com.weshare.weshare.repository.UserRepository;
@@ -32,7 +32,7 @@ public class WeshareApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		User usuario = new User("admin", "12345");
+		Usuario usuario = new Usuario("admin", "12345");
 		userRepository.save(usuario);
 
 		Category animal = new Category("Animal");

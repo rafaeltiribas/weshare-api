@@ -1,7 +1,7 @@
 package com.weshare.weshare.controller;
 
 import com.weshare.weshare.exception.LoginException;
-import com.weshare.weshare.model.User;
+import com.weshare.weshare.model.Usuario;
 import com.weshare.weshare.service.AuthenticationService;
 import com.weshare.weshare.util.TokenResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +16,8 @@ public class AuthenticationController {
     private AuthenticationService autenticacaoService;
 
     @PostMapping("login")  // http://localhost:8080/autenticacao/login
-    public TokenResponse login(@RequestBody User usuario) {
-        User usuarioLogado = autenticacaoService.login(usuario);
+    public TokenResponse login(@RequestBody Usuario usuario) {
+        Usuario usuarioLogado = autenticacaoService.login(usuario);
         if (usuarioLogado != null) {
             System.out.println("Sucesso");
             return new TokenResponse("Sucesso");

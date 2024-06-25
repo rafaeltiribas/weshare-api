@@ -13,7 +13,7 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @Entity
-public class User {
+public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,7 +23,7 @@ public class User {
     @NotEmpty(message = "A 'Senha' deve ser informada.")
     private String senha;
 
-    public User(String conta, String senha) {
+    public Usuario(String conta, String senha) {
         this.conta = conta;
         this.senha = senha;
     }

@@ -1,9 +1,9 @@
 package com.weshare.weshare.repository;
 
-import com.weshare.weshare.model.User;
+import com.weshare.weshare.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<Usuario, Long> {
 
-    User findByContaAndSenha(String conta, String senha);
+    Usuario findByContaAndSenha(String conta, String senha);
 }

@@ -2,8 +2,10 @@ package com.weshare.weshare;
 
 import com.weshare.weshare.model.Category;
 import com.weshare.weshare.model.NonGovernmentalOrganization;
+import com.weshare.weshare.model.User;
 import com.weshare.weshare.repository.CategoryRepository;
 import com.weshare.weshare.repository.NonGovernmentalOrganizationRepository;
+import com.weshare.weshare.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,12 +22,18 @@ public class WeshareApplication implements CommandLineRunner {
 	@Autowired
 	private NonGovernmentalOrganizationRepository nonGovernmentalOrganizationRepository;
 
+	@Autowired
+	private UserRepository userRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(WeshareApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
+
+		User usuario = new User("admin", "12345");
+		userRepository.save(usuario);
 
 		Category animal = new Category("Animal");
 		categoryRepository.save(animal);
